@@ -35,11 +35,14 @@ const addTask = () => {
         
         // Remove task from the list!
         dltBtn.onclick = function () {
-           ulTaskList.removeChild(li)
-           const index = taskList.indexOf(getTitleValue)
-           if (index > -1) {
-                taskList.splice(index, 1)  // Remove specific task from array!
-           }
+           let text = "Press a button!\nEither OK or Cancel."
+           if (confirm(text) == true) {
+            ulTaskList.removeChild(li)
+            const index = taskList.indexOf(getTitleValue)
+            if (index > -1) {
+                    taskList.splice(index, 1)  // Remove specific task from array!
+            }
+          } 
            console.log(taskList);
         }
 
